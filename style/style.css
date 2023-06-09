@@ -1,0 +1,23 @@
+.hero-section {
+    padding: 150px 0;
+    background-image: url('../img/slide-3.jpg');
+    background-size: cover;
+}
+
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+
+
+.center-button { 
+    width: 200px;
+    height: 100px;
+}
+
+
+
+
