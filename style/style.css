@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    font-family: Tahoma, sans-serif;
+}
 .hero-section {
     padding: 150px 0;
     background-image: url('../img/slide-3.jpg');
