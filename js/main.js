@@ -47,14 +47,7 @@ let tasks = [
 }
 ];
 
-// if you want the sort button to work uncomment the code
-// because it is not working properly, it deletes the tasks
-// when you uncomment the code just click on the sort button and it will show the tasks 
 
-
-//   document.getElementById("sortButton").addEventListener("click", function() {
-//   tasks.sort((a, b) => a.priority - b.priority);
-//   document.getElementById("tasks").innerHTML = "";
   
   for(let task of tasks){
       document.getElementById("tasks").innerHTML += `
@@ -92,28 +85,27 @@ let tasks = [
             </div>`
        }
              
-   
 
 let btns = document.getElementsByClassName("priorityBtn");
 
-for (let i = 0; i < btns.length; i++) {
+for (let i in btns) {
     btns[i].addEventListener("click", function(){
-    btns[i].innerHTML =1+ (tasks[i].priority++ % 5);
+    if(tasks[i].priority != 5){
+    tasks[i].priority++;
+    }else {
+        tasks[i].priority = 0;
+    }
+    btns[i].innerHTML = tasks[i].priority;
     btns[i].classList.remove("btn-success", "btn-warning", "btn-danger");
     
-                    
+                      
     if (tasks[i].priority === 0 || tasks[i].priority === 1) {
         btns[i].classList.add("btn-success");
     } else if (tasks[i].priority === 2 || tasks[i].priority === 3) {
-        btns[i].classList.add("btn-warning");
-        } else if (tasks[i].priority === 4 || tasks[i].priority === 5) {
-            btns[i].classList.add("btn-danger");
-        };
+    btns[i].classList.add("btn-warning");
+    } else if (tasks[i].priority === 4 || tasks[i].priority === 5) {
+    btns[i].classList.add("btn-danger");
+    };
     });
-
 }
-
-// })
-
-
 
