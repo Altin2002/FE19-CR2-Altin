@@ -47,9 +47,16 @@ let tasks = [
 }
 ];
 
+// sort button
+// const sortButton = document.getElementById("sortButton");
 
+// sortButton.addEventListener("click", function() {
+//   tasks.sort((a, b) => {
+//     return a.priority - b.priority;
+//   });
+// });
   
-  for(let task of tasks){
+for(let task of tasks){
       document.getElementById("tasks").innerHTML += `
       <div class="card shadow ">
       <div class="top-card m-3 d-flex justify-content-between">
@@ -83,8 +90,8 @@ let tasks = [
             </div>
             </div>
             </div>`
-       }
-             
+ }
+         
 
 let btns = document.getElementsByClassName("priorityBtn");
 
